@@ -1,8 +1,8 @@
 ## Put comments here that give an overall description of what your functions do
 
 #Description: 
-# makeCacheMatrix stores matrix data and specialized matrix functions (to get/set the matrix and its inverse) in a list
-# cacheSolve takes a list made with makeCacheMatrix as argument, and will return the inverse of the matrix, caching
+# makeCacheMatrix stores a matrix and specialized matrix functions (to get/set the matrix and its inverse) in a list
+# cacheSolve takes a list made with makeCacheMatrix as argument, and will return the inverse of the stored matrix, caching
 # the inverse matrix result, so that it will not have to be recalculated when needed again; 
 # when the inverse is requested a message ("getting cached matrix inverse") is printed when using the cached result
 
@@ -13,6 +13,7 @@
 #Example
 
 # > sm<-makeCacheMatrix(matrix(1:4,2,2))
+
 #first call to cacheSolve does not print a message
 # > cacheSolve(sm)
 #      [,1] [,2]
@@ -32,10 +33,10 @@
 ## Write a short comment describing this function
 
 #Description: store in a list a matrix and special functions to get/set the matrix and its inverse 
-#Argument:    a matrix (should be invertible, but is not checked)
+#Argument:    a matrix (should be invertible, but this is not checked)
 #Value:       a list with four items, each a function 
-#             fsetmat: to set the matrix data
-#             fgetmat: to get the matrix data
+#             fsetmat : to set the matrix data
+#             fgetmat : to get the matrix data
 #             fgetminv: to get the inverse of the matrix (will be null if inverse not yet calculated)
 #             fsetminv: sets the inverse matrix
 
@@ -70,7 +71,7 @@ makeCacheMatrix <- function(mat = matrix()) {
 
 ## Write a short comment describing this function
 
-#Description: return a matrix that is the inverse of the argument
+#Description: return a matrix that is the inverse of the matrix stored in the argument
 #Usage:       cacheSolve(arg<-makeCacheMatrix(matrixM))
 #Arguments:   argument is a list as produced by makeCacheMatrix()
 #Value:       returns inverse of matrix stored in the argument
