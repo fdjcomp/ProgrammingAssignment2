@@ -2,7 +2,7 @@
 
 #Description: 
 # makeCacheMatrix stores matrix data and specialized matrix functions (to get/set the matrix and its inverse) in a list
-# cacheSolve a list made with makeCacheMatrix as argument, and will return the inverse of the matrix, caching
+# cacheSolve takes a list made with makeCacheMatrix as argument, and will return the inverse of the matrix, caching
 # the inverse matrix result, so that it will not have to be recalculated when needed again; 
 # when the inverse is requested a message ("getting cached matrix inverse") is printed when using the cached result
 
